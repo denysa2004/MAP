@@ -5,7 +5,7 @@ public class Main {
         Universitat universitat = new Universitat();
         Array array = new Array();
         int[] noten = {29, 37, 38, 41, 84, 67};
-        int[] zahlen = {12, 5, 6, 74, 78, 43};
+        int[] zahlen = {4,8,3,10,17,3};
 
         //ausreicehende Noten
         int[] nichtAusreichendeNoten = universitat.ausreichend(noten);
@@ -41,7 +41,10 @@ public class Main {
         System.out.println("1) Maximale Zahl : "+array.maximaleZahl(zahlen));
 
         //minimale Zahl
-        System.out.println("b) Minimale ZAhl : "+array.minimaleZahl(zahlen));
+        System.out.println("b) Minimale Zahl : "+array.minimaleZahl(zahlen));
+
+        //maximale Summe
+        System.out.println("c)Maximale Summe: "+array.maximaleSumme(zahlen));
     }
 
     }
