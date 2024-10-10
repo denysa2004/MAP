@@ -45,6 +45,9 @@ public class Main {
 
         //maximale Summe
         System.out.println("c)Maximale Summe: "+array.maximaleSumme(zahlen));
+
+        //minimale Summe
+        System.out.println("d)Minimale Summe: "+array.minimaleSumme(zahlen));
     }
 
     }

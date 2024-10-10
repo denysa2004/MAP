@@ -37,4 +37,21 @@ public class Array {
             sum=sum+(minimaleZahlAuftriit-1)*minimum;
         return sum;
     }
+    public int minimaleSumme(int[] zahlen){
+        int maximum=maximaleZahl(zahlen);
+        int sum=0;
+        int maximaleZahlAuftriit=0;
+        for(int index=0; index<zahlen.length; index++){
+            if(zahlen[index]!=maximum ){
+                sum+=zahlen[index];
+            }
+            else{
+                maximaleZahlAuftriit++;
+            }
+
+        }
+        if(maximaleZahlAuftriit!=1)
+            sum=sum+(maximaleZahlAuftriit-1)*maximum;
+        return sum;
+    }
 }
