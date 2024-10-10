@@ -1,57 +1,57 @@
 public class Array {
 
-    public int maximaleZahl(int[] zahlen){
+    public int maximNumber(int[] numbers){
         int maximum = 0;
-        for(int index=0; index<zahlen.length; index++){
-            if(zahlen[index] > maximum){
-                maximum = zahlen[index];
+        for(int index=0; index<numbers.length; index++){
+            if(numbers[index] > maximum){
+                maximum = numbers[index];
             }
         }
         return maximum;
     }
 
-    public int minimaleZahl(int[] zahlen){
-        int minimum=zahlen[0];
-        for(int index=1; index<zahlen.length; index++){
-            if(zahlen[index]<minimum)
+    public int minimNumber(int[] numbers){
+        int minimum=numbers[0];
+        for(int index=1; index<numbers.length; index++){
+            if(numbers[index]<minimum)
             {
-                minimum = zahlen[index];
+                minimum = numbers[index];
             }
         }
         return minimum;
     }
-    public int maximaleSumme(int[] zahlen){
-        int minimum=minimaleZahl(zahlen);
+    public int maximSum(int[] numbers){
+        int minimum=minimNumber(numbers);
         int sum=0;
-        int minimaleZahlAuftriit=0;
-        for(int index=0; index<zahlen.length; index++){
-            if(zahlen[index]!=minimum ){
-                sum+=zahlen[index];
+        int minimNumberAppearance=0;
+        for(int index=0; index<numbers.length; index++){
+            if(numbers[index]!=minimum ){
+                sum+=numbers[index];
             }
             else{
-                minimaleZahlAuftriit++;
+                minimNumberAppearance++;
             }
 
         }
-        if(minimaleZahlAuftriit!=1)
-            sum=sum+(minimaleZahlAuftriit-1)*minimum;
+        if(minimNumberAppearance!=1)
+            sum=sum+(minimNumberAppearance-1)*minimum;
         return sum;
     }
-    public int minimaleSumme(int[] zahlen){
-        int maximum=maximaleZahl(zahlen);
+    public int minimSum(int[] numbers){
+        int maximum=maximNumber(numbers);
         int sum=0;
-        int maximaleZahlAuftriit=0;
-        for(int index=0; index<zahlen.length; index++){
-            if(zahlen[index]!=maximum ){
-                sum+=zahlen[index];
+        int maximNumberAppearance=0;
+        for(int index=0; index<numbers.length; index++){
+            if(numbers[index]!=maximum ){
+                sum+=numbers[index];
             }
             else{
-                maximaleZahlAuftriit++;
+                maximNumberAppearance++;
             }
 
         }
-        if(maximaleZahlAuftriit!=1)
-            sum=sum+(maximaleZahlAuftriit-1)*maximum;
+        if(maximNumberAppearance!=1)
+            sum=sum+(maximNumberAppearance-1)*maximum;
         return sum;
     }
 }

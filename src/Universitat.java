@@ -1,57 +1,57 @@
 public class Universitat {
 
-    public int[] nichtAusreichendeNoten;
-    public int[] abgerundeteNoten;
+    public int[] insufficientGrades;
+    public int[] roundedGrades;
 
-    public int[] ausreichend(int[] noten) {
-        int nichtAusreichendeNotenZahl = 0;
-        for (int i = 0; i < noten.length; i++) {
-            if (noten[i] < 40) {
-                nichtAusreichendeNotenZahl++;
+    public int[] ausreichend(int[] grades) {
+        int insufficientGradesNumber= 0;
+        for (int i = 0; i < grades.length; i++) {
+            if (grades[i] < 40) {
+                insufficientGradesNumber++;
             }
         }
-        nichtAusreichendeNoten = new int[nichtAusreichendeNotenZahl];
+        insufficientGrades = new int[insufficientGradesNumber];
 
         int index = 0;
-        for (int i = 0; i < noten.length; i++) {
-            if (noten[i] < 40) {
-                nichtAusreichendeNoten[index] = noten[i];
+        for (int i = 0; i < grades.length; i++) {
+            if (grades[i] < 40) {
+                insufficientGrades[index] = grades[i];
                 index++;
             }
         }
-        return nichtAusreichendeNoten;
+        return insufficientGrades;
     }
 
-    public double durchschnittsNote(int[] noten) {
+    public double averageGrade(int[] grades) {
         float sum = 0;
-        for (int i = 0; i < noten.length; i++) {
-            sum += noten[i];
+        for (int i = 0; i < grades.length; i++) {
+            sum += grades[i];
         }
-        double average = sum / noten.length;
+        double average = sum / grades.length;
         return (Math.round(average * 100) / 100.00);
     }
 
-    public int[] abgerundeteNoten(int[] noten) {
-        int notenZahl=noten.length;
-        abgerundeteNoten = new int[notenZahl];
+    public int[] roundedGrades(int[] grades) {
+         int gradesNumber=grades.length;
+         roundedGrades = new int[gradesNumber];
 
-        for (int i = 0; i < noten.length; i++) {
-            int rest = noten[i] % 5;
-            if (noten[i] >= 38 && (noten[i] + 5 - rest) - noten[i] < 3)
-                    abgerundeteNoten[i]=noten[i] + 5 - rest;
+        for (int i = 0; i <grades.length; i++) {
+            int rest = grades[i] % 5;
+            if (grades[i] >= 38 && (grades[i] + 5 - rest) - grades[i] < 3)
+                    roundedGrades[i]=grades[i] + 5 - rest;
                 else
-                    abgerundeteNoten[i]=noten[i] ;
+                    roundedGrades[i]=grades[i] ;
 
         }
-        return abgerundeteNoten;
+        return roundedGrades;
     }
 
 
-    public int maximaleAbgerundeteNoten(){
+    public int maximumRoundedGrade(){
         int maxim=0;
-        for(int i=0;i<abgerundeteNoten.length;i++){
-            if(abgerundeteNoten[i]>maxim)
-                maxim=abgerundeteNoten[i];
+        for(int i=0;i<roundedGrades.length;i++){
+            if(roundedGrades[i]>maxim)
+                maxim=roundedGrades[i];
         }
         return maxim;
     }
