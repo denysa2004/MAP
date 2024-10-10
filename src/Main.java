@@ -6,6 +6,7 @@ public class Main {
         Array array = new Array();
         int[] noten = {29, 37, 38, 41, 84, 67};
         int[] zahlen = {12, 5, 6, 74, 78, 43};
+
         //ausreicehende Noten
         int[] nichtAusreichendeNoten = universitat.ausreichend(noten);
         System.out.print('[');
@@ -39,6 +40,8 @@ public class Main {
         System.out.println("Aufgabe 2 ");
         System.out.println("1) Maximale Zahl : "+array.maximaleZahl(zahlen));
 
+        //minimale Zahl
+        System.out.println("b) Minimale ZAhl : "+array.minimaleZahl(zahlen));
     }
 
     }

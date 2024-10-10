@@ -9,4 +9,15 @@ public class Array {
         }
         return maximum;
     }
+
+    public int minimaleZahl(int[] zahlen){
+        int minimum=zahlen[0];
+        for(int index=1; index<zahlen.length; index++){
+            if(zahlen[index]<minimum)
+            {
+                minimum = zahlen[index];
+            }
+        }
+        return minimum;
+    }
 }
