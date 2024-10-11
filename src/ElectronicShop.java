@@ -34,4 +34,19 @@ public class ElectronicShop {
          }
          return maximumPrice;
      }
+
+     public int mostExpensivePurchases(int[] tastatur,int[] usb,int budget){
+         int maximumPrice=0;
+         for(int index=0;index<usb.length;index++){
+             for(int index1=0;index1<tastatur.length;index1++){
+                 if(usb[index]+tastatur[index1]<budget && usb[index]+tastatur[index1]>maximumPrice){
+                     maximumPrice=usb[index]+tastatur[index1];
+                 }
+             }
+         }
+           if(maximumPrice!=0)
+             return maximumPrice;
+           else
+               return -1;
+     }
 }
