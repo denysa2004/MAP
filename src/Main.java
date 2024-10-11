@@ -93,9 +93,10 @@ public class Main {
         System.out.println("Aufgabe 4");
         int[] tastaturPrice={12,34,56,78,90,8};
         int[] usbPrice={100,67,89,23,45,67};
+        int budget=99;
         System.out.println("Die billigste Tastatur mit dem Preis "+electronicShop.cheapestTastatur(tastaturPrice));
         System.out.println("Die teuerste Gegenstand mit dem Preis "+electronicShop.mostExpensiveItem(tastaturPrice,usbPrice));
-
+        System.out.println("Die teuerste USB der Mark kaufen kann hat dem Preis "+electronicShop.mostExpensivePurchase(usbPrice,budget));
     }
 
 }
