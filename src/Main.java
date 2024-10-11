@@ -5,6 +5,7 @@ public class Main {
         Universitat university = new Universitat();
         Array array = new Array();
         ArrayNumbers arrayNumber=new ArrayNumbers();
+        ElectronicShop electronicShop=new ElectronicShop();
 
         int[] grades = {29, 37, 38, 41, 84, 67};
         int[] numbers = {4,8,3,10,17,3};
@@ -76,7 +77,7 @@ public class Main {
         System.out.print("Die Subtraktion des Arrays : [");
         for(int index=0;index<newNumberafterSub.length;index++)
             System.out.print(" "+newNumberafterSub[index]);
-        System.out.print(" ]");
+        System.out.println(" ]");
 
         System.out.print("Die Multiplikation des Arrays : [");
         for(int index=0;index<newNumberafterMul.length;index++)
@@ -87,7 +88,13 @@ public class Main {
         System.out.print("Die Division des Arrays : [");
         for(int index=0;index<newNumberafterDiv.length;index++)
             System.out.print(" "+newNumberafterDiv[index]);
-        System.out.print(" ]");
+        System.out.println(" ]");
+
+        System.out.println("Aufgabe 4");
+        int[] tastaturPrice={12,34,56,78,90,8};
+        int[] usb={100,67,89,23,45,67};
+        System.out.println("Die billigste Tastatur mit dem Preis "+electronicShop.cheapestTastatur(tastaturPrice));
+
 
     }
 
