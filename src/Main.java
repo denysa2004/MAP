@@ -9,9 +9,7 @@ public class Main {
         int[] grades = {29, 37, 38, 41, 84, 67};
         int[] numbers = {4,8,3,10,17,3};
 
-        int[] array1={1,3,0,0,0,0,0,0,0};
-        int[] array2={9,6,0,0,0,0,0,0,0};
-        int[] newNumber=arrayNumber.addArray(array1,array2);
+
 
         //ausreicehende Noten
         int[] insufficientGrades = university.ausreichend(grades);
@@ -58,11 +56,39 @@ public class Main {
 
         //Aufgabe3
         //a)
+
+        int[] array1={8,3,0,7,0,0,0,0,0};
+        int[] array2={8,2,0,8,0,0,0,0,0};
+
+        int number=5;
+        int[] newNumberafterAdd=arrayNumber.addArray(array1,array2);
+        int[] newNumberafterSub=arrayNumber.subtractArray(array1,array2);
+        int[] newNumberafterMul=arrayNumber.multiplyArray(array1,number);
+        int[] newNumberafterDiv=arrayNumber.multiplyArray(array1,number);
+
         System.out.println("Aufgabe3");
         System.out.print("Die Summe des Arrays : [");
-        for(int index=0;index<newNumber.length;index++)
-            System.out.print(" "+newNumber[index]);
+        for(int index=0;index<newNumberafterAdd.length;index++)
+            System.out.print(" "+newNumberafterAdd[index]);
+        System.out.println(" ]");
+
+
+        System.out.print("Die Subtraktion des Arrays : [");
+        for(int index=0;index<newNumberafterSub.length;index++)
+            System.out.print(" "+newNumberafterSub[index]);
         System.out.print(" ]");
-    }
+
+        System.out.print("Die Multiplikation des Arrays : [");
+        for(int index=0;index<newNumberafterMul.length;index++)
+           System.out.print(" "+newNumberafterMul[index]);
+        System.out.println(" ]");
+
+
+        System.out.print("Die Division des Arrays : [");
+        for(int index=0;index<newNumberafterDiv.length;index++)
+            System.out.print(" "+newNumberafterDiv[index]);
+        System.out.print(" ]");
 
     }
+
+}
