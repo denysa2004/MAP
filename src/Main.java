@@ -16,11 +16,11 @@ public class Main {
         int[] insufficientGrades = university.insufficient(grades);
         System.out.println("Aufgabe1");
         System.out.print('[');
-        for (int i = 0; i < insufficientGrades.length; i++) {
-            if (i != insufficientGrades.length - 1)
-                System.out.print(insufficientGrades[i] + ", ");
+        for (int index = 0; index < insufficientGrades.length; index++) {
+            if (index != insufficientGrades.length - 1)
+                System.out.print(insufficientGrades[index] + ", ");
             else
-                System.out.print(insufficientGrades[i]);
+                System.out.print(insufficientGrades[index]);
 
         }
         System.out.println(']');
@@ -30,11 +30,11 @@ public class Main {
         //abgerundete Noten
         int[] roundedGrades = university.roundedGrades(grades);
         System.out.print("[");
-        for (int i = 0; i < roundedGrades.length; i++) {
-            if (i != roundedGrades.length - 1)
-                System.out.print(roundedGrades[i] + ",");
+        for (int index = 0; index < roundedGrades.length; index++) {
+            if (index != roundedGrades.length - 1)
+                System.out.print(roundedGrades[index] + ",");
             else
-                System.out.print(roundedGrades[i]);
+                System.out.print(roundedGrades[index]);
         }
         System.out.println(']');
 
@@ -75,7 +75,10 @@ public class Main {
 
 
         System.out.print("Die Subtraktion des Arrays : [");
-        for(int index=0;index<newNumberafterSub.length;index++)
+        int counter=0;
+        while(newNumberafterSub[counter]==0){
+            counter++;}
+        for(int index=counter;index<newNumberafterSub.length;index++)
             System.out.print(" "+newNumberafterSub[index]);
         System.out.println(" ]");
 
