@@ -28,7 +28,7 @@ public class ElectronicShop {
      public int mostExpensivePurchase(int[] usb,int budget){
          int maximumPrice=0;
          for(int index=0;index<usb.length;index++){
-             if(usb[index]>maximumPrice && budget>usb[index]){
+             if(usb[index]>maximumPrice && budget>=usb[index]){
                  maximumPrice=usb[index];
              }
          }
