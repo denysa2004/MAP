@@ -5,8 +5,8 @@ public class Universitat {
 
     public int[] insufficient(int[] grades) {
         int insufficientGradesNumber= 0;
-        for (int i = 0; i < grades.length; i++) {
-            if (grades[i] < 40) {
+        for (int index = 0; index < grades.length; index++) {
+            if (grades[index] < 40) {
                 insufficientGradesNumber++;
             }
         }
@@ -24,8 +24,8 @@ public class Universitat {
 
     public double averageGrade(int[] grades) {
         float sum = 0;
-        for (int i = 0; i < grades.length; i++) {
-            sum += grades[i];
+        for (int index = 0; index < grades.length; index++) {
+            sum += grades[index];
         }
         double average = sum / grades.length;
         return (Math.round(average * 100) / 100.00);
@@ -35,12 +35,12 @@ public class Universitat {
          int gradesNumber=grades.length;
          roundedGrades = new int[gradesNumber];
 
-        for (int i = 0; i <grades.length; i++) {
-            int rest = grades[i] % 5;
-            if (grades[i] >= 38 && (grades[i] + 5 - rest) - grades[i] < 3)
-                    roundedGrades[i]=grades[i] + 5 - rest;
+        for (int index = 0; index <grades.length; index++) {
+            int rest = grades[index] % 5;
+            if (grades[index] >= 38 && (grades[index] + 5 - rest) - grades[index] < 3)
+                    roundedGrades[index]=grades[index] + 5 - rest;
                 else
-                    roundedGrades[i]=grades[i] ;
+                    roundedGrades[index]=grades[index] ;
 
         }
         return roundedGrades;
@@ -49,9 +49,9 @@ public class Universitat {
 
     public int maximumRoundedGrade(){
         int maxim=0;
-        for(int i=0;i<roundedGrades.length;i++){
-            if(roundedGrades[i]>maxim)
-                maxim=roundedGrades[i];
+        for(int index=0;index<roundedGrades.length;index++){
+            if(roundedGrades[index]>maxim)
+                maxim=roundedGrades[index];
         }
         return maxim;
     }
