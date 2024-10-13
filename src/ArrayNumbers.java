@@ -54,24 +54,17 @@ public class ArrayNumbers {
         return newArray;
     }
 
+
     public int[] divideArray(int[] array1, int number) {
-
-        int[] newArray = new int[array1.length+1];
+        int[] newArray = new int[array1.length];
         int carry = 0;
-        for (int index =0; index <= array1.length-1; index++) {
-            if(array1[index]%number==0){
-                int div = carry*10+array1[index] / number ;
-                newArray[index]=div;
-                carry=0;
-            }
-            else {
-                int div = array1[index] / number ;
-                newArray[index]=div;
-                carry=array1[index]%number;
-            }
 
-
+        for (int index = 0; index < array1.length; index++) {
+            int currentValue = carry * 10 + array1[index];
+            newArray[index] = currentValue / number;
+            carry = currentValue % number;
         }
+
         return newArray;
     }
 }

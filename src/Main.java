@@ -12,8 +12,8 @@ public class Main {
 
 
 
-        //ausreicehende Noten
-        int[] insufficientGrades = university.ausreichend(grades);
+        //nicht ausreichende Noten
+        int[] insufficientGrades = university.insufficient(grades);
         System.out.println("Aufgabe1");
         System.out.print('[');
         for (int i = 0; i < insufficientGrades.length; i++) {
@@ -65,7 +65,7 @@ public class Main {
         int[] newNumberafterAdd=arrayNumber.addArray(array1,array2);
         int[] newNumberafterSub=arrayNumber.subtractArray(array1,array2);
         int[] newNumberafterMul=arrayNumber.multiplyArray(array1,number);
-        int[] newNumberafterDiv=arrayNumber.multiplyArray(array1,number);
+        int[] newNumberafterDiv=arrayNumber.divideArray(array1,number);
 
         System.out.println("Aufgabe3");
         System.out.print("Die Summe des Arrays : [");
@@ -79,13 +79,13 @@ public class Main {
             System.out.print(" "+newNumberafterSub[index]);
         System.out.println(" ]");
 
-        System.out.print("Die Multiplikation des Arrays : [");
+        System.out.print("Die Multiplikation des Array : [");
         for(int index=0;index<newNumberafterMul.length;index++)
            System.out.print(" "+newNumberafterMul[index]);
         System.out.println(" ]");
 
 
-        System.out.print("Die Division des Arrays : [");
+        System.out.print("Die Division des Array : [");
         for(int index=0;index<newNumberafterDiv.length;index++)
             System.out.print(" "+newNumberafterDiv[index]);
         System.out.println(" ]");
@@ -94,9 +94,10 @@ public class Main {
         int[] tastaturPrice={60,40};
         int[] usbPrice={8,12};
         int budget=60;
+
         System.out.println("Die billigste Tastatur mit dem Preis "+electronicShop.cheapestTastatur(tastaturPrice));
         System.out.println("Die teuerste Gegenstand mit dem Preis "+electronicShop.mostExpensiveItem(tastaturPrice,usbPrice));
-        System.out.println("Die teuerste USB der Mark kaufen kann hat dem Preis "+electronicShop.mostExpensivePurchase(usbPrice,budget));
+        System.out.println("Die teuerste USB der Mark kaufen kann hat den Preis "+electronicShop.mostExpensivePurchase(usbPrice,budget));
         System.out.println("Die teuersten zwei Gegenstade die Mark kaufen kann " +electronicShop.mostExpensivePurchases(tastaturPrice,usbPrice,budget));
     }
 

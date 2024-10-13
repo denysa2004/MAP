@@ -3,7 +3,7 @@ public class Universitat {
     public int[] insufficientGrades;
     public int[] roundedGrades;
 
-    public int[] ausreichend(int[] grades) {
+    public int[] insufficient(int[] grades) {
         int insufficientGradesNumber= 0;
         for (int i = 0; i < grades.length; i++) {
             if (grades[i] < 40) {
