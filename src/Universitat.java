@@ -48,12 +48,12 @@ public class Universitat {
 
 
     public int maximumRoundedGrade(){
-        int maxim=0;
+        int maximRoundedGrade=0;
         for(int index=0;index<roundedGrades.length;index++){
-            if(roundedGrades[index]>maxim)
-                maxim=roundedGrades[index];
+            if(roundedGrades[index]>maximRoundedGrade)
+                maximRoundedGrade=roundedGrades[index];
         }
-        return maxim;
+        return maximRoundedGrade;
     }
 
 
