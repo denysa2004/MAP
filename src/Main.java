@@ -8,12 +8,12 @@ public class Main {
         ElectronicShop electronicShop=new ElectronicShop();
 
         int[] grades = {29, 37, 38, 41, 84, 67};
-        int[] numbers = {4,8,3,10,17,3};
+        int[] numbers = {-4,8,3,10,17};
 
 
 
         //nicht ausreichende Noten
-        int[] insufficientGrades = university.insufficient(grades);
+        int[] insufficientGrades = university.insufficient(university.roundedGrades(grades));
         System.out.println("Aufgabe1");
         System.out.print('[');
         for (int index = 0; index < insufficientGrades.length; index++) {
@@ -61,7 +61,7 @@ public class Main {
         int[] array1={8,3,0,7,0,0,0,0,0};
         int[] array2={8,2,0,8,0,0,0,0,0};
 
-        int number=5;
+        int number=1;
         int[] newNumberafterAdd=arrayNumber.addArray(array1,array2);
         int[] newNumberafterSub=arrayNumber.subtractArray(array1,array2);
         int[] newNumberafterMul=arrayNumber.multiplyArray(array1,number);
@@ -94,7 +94,7 @@ public class Main {
         System.out.println(" ]");
 
         System.out.println("Aufgabe 4");
-        int[] tastaturPrice={60,40};
+        int[] tastaturPrice={60};
         int[] usbPrice={8,12};
         int budget=60;
 
@@ -102,6 +102,10 @@ public class Main {
         System.out.println("Die teuerste Gegenstand mit dem Preis "+electronicShop.mostExpensiveItem(tastaturPrice,usbPrice));
         System.out.println("Die teuerste USB der Mark kaufen kann hat den Preis "+electronicShop.mostExpensivePurchase(usbPrice,budget));
         System.out.println("Die teuersten zwei Gegenstade die Mark kaufen kann " +electronicShop.mostExpensivePurchases(tastaturPrice,usbPrice,budget));
+        System.out.println("hallo");
+
     }
+    //adaugam un comentariu
+
 
 }
